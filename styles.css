@@ -1,0 +1,335 @@
+/*GENERAL* html et body */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Div commune de tous qui englobe le contenu*/
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+/*Header* la partie menu et logo en haut de page*/
+.logo {
+    padding: 10px;
+}
+
+.step_1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 100%;
+    text-align: center;
+    flex: 1;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.nav {
+    color: black;
+    text-decoration: none;
+    display: inline;
+    margin-right: 30px;
+    font-size: 15px;
+}
+
+.pay {
+    color: black;
+    text-decoration: none;
+    float: right;
+    padding-right: 10px;
+    font-weight: bolder;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*** ce qui va concerner le media query* il ne doit pas s'afficher sur l'écran Desktop ***/
+label {
+    width: 26px;
+    margin: 0 0 0 20px;
+    font-size: 30px;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+.cadena, #deux {
+    display: none;
+}
+
+/*BANNER* l'image et son texte qui recouvrent le haut de page*/
+.header {
+    position: relative;
+}
+
+.img_banner {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+}
+
+.banner {
+    width: 750px;
+    height: 450px;
+    margin: auto;
+    background: #474747;
+    border-right: 8px solid white;
+    border-left: 8px solid white;
+}
+
+.title {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border-bottom: 1px solid white;
+    width: 90px;
+    margin: 0px auto 30px auto;
+    padding: 130px 0px 35px 0px;
+}
+
+.text {
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    width: 610px;
+    margin: auto;
+    line-height: 2;
+}
+
+/*CONTENT* ce qu'il y a dans le contenu*/
+.products {
+    width: 100%;
+    align-items: center;
+    padding-top: 20px;
+    margin: 10px auto;
+}
+
+.step_2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.all {
+    margin: 10px 0;
+}
+
+.img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    text-align: center;
+    margin: 10px 25px;
+}
+
+.text_img {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2px;
+}
+
+.text_img1 {
+    font-size: 15px;
+    color: #888787;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+    line-height: 2px;
+}
+
+.price {
+    font-family: 'Cormorant SC', serif;
+    font-size: 20px;
+    color: #979797;
+}
+
+
+/**AFFICHAGE* ecran mobile**/
+
+@media only screen and (max-width: 500px) {
+
+    /*GENERAL*/
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+    }
+
+    /*HEADER* menu haut de page disparu*/
+    .menu {
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        margin: 0;
+    }
+
+    .logo {
+        width: 120px;
+        height: 80px;
+        margin: auto;
+        padding: 0px;
+    }
+
+    .step_1 {
+        width: 500px;
+        display: flex;
+    }
+
+    .pay {
+        display: none;
+    }
+
+    /*Affichage du Toggle et cadena+(2)*/
+    #toggle:checked+.menu {
+        display: block;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    .cadena {
+        width: 38px;
+        height: 30px;
+        text-align: center;
+        display: flex;
+        padding-right: 5px;
+        margin-bottom: 0;
+    }
+
+    #deux {
+        display: flex;
+        font-size: 15px;
+        font-weight: bold;
+        margin-right: 20px;
+    }
+
+    /*BANNER* l'image et son texte en haut de page*/
+    .header {
+        position: relative;
+    }
+
+    .img_banner {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        margin: 0;
+    }
+
+    .banner {
+        width: 370px;
+        height: 200px;
+        margin: 0 auto;
+        background: #474747;
+        border-right: 8px solid white;
+        border-left: 8px solid white;
+    }
+
+    .title {
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        border-bottom: 1px solid white;
+        font-size: 22px;
+        width: 70px;
+        margin: 0px auto 10px auto;
+        padding: 30px 0px 10px 0px;
+    }
+
+    .text {
+        color: white;
+        font-size: 12px;
+        text-align: center;
+        width: 300px;
+        margin: auto;
+        line-height: 2;
+    }
+
+    /*CONTENT*/
+    .products {
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .img {
+        width: 200px;
+        height: 170px;
+        object-fit: cover;
+        text-align: center;
+        margin: 10px 25px;
+    }
+
+    .text_img {
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .text_img1 {
+        margin: 0;
+        color: #888787;
+        font-weight: bold;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .remake {
+        margin-left: 5px;
+        margin-right: 5px;
+        text-transform: uppercase;
+    }
+
+    .price {
+        font-family: 'Cormorant SC', serif;
+        font-size: 18px;
+        color: #979797;
+    }
+
+    .step_2 {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
